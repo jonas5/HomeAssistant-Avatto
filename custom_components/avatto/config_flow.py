@@ -6,7 +6,6 @@ from .const import DOMAIN, DEVICE_IP, DEVICE_KEY, _LOGGER, DEVICE_ID, ADD_MANUAL
 from .utils import getData, getDiscoveredDevices
 
 
-@config_entries.HANDLERS.register(DOMAIN)
 class FlowHandler(config_entries.ConfigFlow):
     """Handle a config flow."""
 
