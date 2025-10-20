@@ -5,17 +5,7 @@ from homeassistant.config_entries import ConfigEntry
 
 
 async def async_setup(hass: HomeAssistant, config: dict):
-    """Set up the LocalTuya integration component."""
-
-    hass.data[DOMAIN] = {}
-
-    def handleShutdown(event):
-        """Clean up resources when shutting down."""
-
-    try:
-        hass.bus.async_listen_once(EVENT_HOMEASSISTANT_STOP, handleShutdown)
-    except Exception:
-        _LOGGER.exception("failed to set up Avatto")
+    """Set up the Avatto component."""
     return True
 
 
